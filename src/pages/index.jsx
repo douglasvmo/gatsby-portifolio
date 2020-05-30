@@ -33,7 +33,7 @@ const IndexPage = () => (
             ></img>
             <br />
             tenho experiencia criando aplicações Web e Mobile com JavaScript /
-            Reactjs / Nodejs / React Native e algumas outros bibliotecas e
+            Reactjs / Nodejs / React Native e algumas outras bibliotecas e
             estruturas legais.
           </p>
         </div>
