@@ -7,6 +7,7 @@
 
 import React from "react"
 import Header from "../Header"
+import Footer from "../Footer"
 
 import "./main.css"
 
@@ -15,6 +16,7 @@ const Layout = ({ children }) => {
     <div className="bg-gray-200">
       <Header />
       <main>{children}</main>
+      <Footer />
     </div>
   )
 }
