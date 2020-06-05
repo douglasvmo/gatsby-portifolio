@@ -1,6 +1,6 @@
 import React from "react"
 
-import BeTheHeroImage from "../images/"
+import Image from "../images/"
 
 import "./style.css"
 
@@ -17,7 +17,7 @@ const Card = ({
       <div className="card">
         <div className="thefront ">
           <div className="card-picture">
-            <BeTheHeroImage imageName={imageName} />
+            <Image imageName={imageName} />
           </div>
           <div className="card-text">
             <div className="card-title">{name}</div>
@@ -26,21 +26,24 @@ const Card = ({
         </div>
         <div className="theback" style={{ backgroundColor: backColor }}>
           <div className="back-text">
-            <a
-              className="back-button"
-              href={pageLink}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Page
-            </a>
+            {pageLink && (
+              <a
+                className="back-button"
+                href={pageLink}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image imageName="eye.png" alt="view" />
+              </a>
+            )}
+
             <a
               className="back-button"
               href={sorceLink}
               target="_blank"
               rel="noreferrer"
             >
-              Source Code
+              <Image imageName="code.png" alt="code" />
             </a>
           </div>
         </div>

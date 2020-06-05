@@ -38,7 +38,7 @@ const IndexPage = () => (
           </p>
         </div>
       </div>
-      <div className="flex-wrap">
+      <div className="flex-wrap px-8 md:px-4 lg: px-0">
         <Image imageName="home.png" />
       </div>
     </div>
@@ -54,14 +54,22 @@ const IndexPage = () => (
         imageName="bethehero.png"
         description="Plataforma para ajudar pessoas que querem ajudar ONGs."
         backColor="#e53e3e"
+        pageLink="https://be-the-hero-42.netlify.app/"
         sorceLink="https://github.com/douglasOlv/be-the-hero"
       />
       <Card
-        name="video-Maker"
+        name="video-maker"
         imageName="video-maker.png"
         description="Projeto para criar vídeos para o Youtube de forma automática."
         backColor="#3182ce"
         sorceLink="https://github.com/douglasOlv/video-maker"
+      />
+      <Card
+        name="Modelo Site"
+        imageName=".png"
+        description="Site institucional completo incluindo navegação, galeria e captura de contato."
+        backColor="#6c5ce7"
+        sorceLink="https://github.com/douglasOlv"
       />
     </div>
   </Layout>
