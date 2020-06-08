@@ -66,10 +66,11 @@ const IndexPage = () => (
       />
       <Card
         name="Modelo Site"
-        imageName=".png"
-        description="Site institucional completo incluindo navegação, galeria e captura de contato."
+        imageName="site.png"
+        description="Site institucional com links de navegação, galeria e captura de contato."
         backColor="#6c5ce7"
-        sorceLink="https://github.com/douglasOlv"
+        pageLink="https://vibrant-bassi-3d6684.netlify.app/"
+        sorceLink="https://github.com/douglasOlv/site-model"
       />
     </div>
   </Layout>
