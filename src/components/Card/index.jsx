@@ -1,8 +1,8 @@
 import React from "react"
-
-import Image from "../images/"
-
+import { FaEye, FaCode } from "react-icons/fa"
 import "./style.css"
+
+import Image from "../images"
 
 const Card = ({
   name,
@@ -11,21 +11,34 @@ const Card = ({
   pageLink,
   backColor,
   imageName,
+  techs,
 }) => {
   return (
     <div className="main-card">
       <div className="card">
         <div className="thefront ">
           <div className="card-picture">
+            <h2 className="card-title" style={{ backgroundColor: backColor }}>
+              {name}
+            </h2>
             <Image imageName={imageName} />
           </div>
           <div className="card-text">
-            <div className="card-title">{name}</div>
-            <p className="card-description">{description}</p>
+            <ul className="techs">
+              {techs.map((item, index) => (
+                <li
+                  key={index.toString()}
+                  style={{ borderBottomColor: `${backColor}66` }}
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
         <div className="theback" style={{ backgroundColor: backColor }}>
-          <div className="back-text">
+          <p className="card-description">{description}</p>
+          <div className="back-nav">
             {pageLink && (
               <a
                 className="back-button"
@@ -33,7 +46,7 @@ const Card = ({
                 target="_blank"
                 rel="noreferrer"
               >
-                <Image imageName="eye.png" alt="view" />
+                <FaEye size={28} color={backColor} />
               </a>
             )}
 
@@ -43,7 +56,7 @@ const Card = ({
               target="_blank"
               rel="noreferrer"
             >
-              <Image imageName="code.png" alt="code" />
+              <FaCode size={28} color={backColor} />
             </a>
           </div>
         </div>

@@ -56,13 +56,15 @@ const IndexPage = () => (
         backColor="#e53e3e"
         pageLink="https://be-the-hero-42.netlify.app/"
         sorceLink="https://github.com/douglasOlv/be-the-hero"
+        techs={["NodeJS", "React", "React Native", "Knex"]}
       />
       <Card
-        name="video-maker"
+        name="Video Maker"
         imageName="video-maker.png"
         description="Projeto para criar vídeos para o Youtube de forma automática."
         backColor="#3182ce"
         sorceLink="https://github.com/douglasOlv/video-maker"
+        techs={["NodeJS", "IBM Watson", "Google Api", "Algorithmia Api"]}
       />
       <Card
         name="Modelo Site"
@@ -71,6 +73,7 @@ const IndexPage = () => (
         backColor="#6c5ce7"
         pageLink="https://vibrant-bassi-3d6684.netlify.app/"
         sorceLink="https://github.com/douglasOlv/site-model"
+        techs={["Gatsby", "Gatsby Image", "SEO", "Algorithmia Api"]}
       />
     </div>
   </Layout>

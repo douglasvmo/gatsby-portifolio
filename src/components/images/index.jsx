@@ -3,15 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 const Image = ({ imageName, alt }) => {
-  const {
-    beTheHero,
-    videoMaker,
-    site,
-    home,
-    logo,
-    eye,
-    code,
-  } = useStaticQuery(graphql`
+  const { beTheHero, videoMaker, site, home, logo } = useStaticQuery(graphql`
     query {
       beTheHero: file(relativePath: { eq: "bethehero.png" }) {
         childImageSharp {
@@ -48,20 +40,6 @@ const Image = ({ imageName, alt }) => {
           }
         }
       }
-      eye: file(relativePath: { eq: "eye.png" }) {
-        childImageSharp {
-          fixed(width: 36) {
-            ...GatsbyImageSharpFixed_tracedSVG
-          }
-        }
-      }
-      code: file(relativePath: { eq: "code.png" }) {
-        childImageSharp {
-          fixed(width: 36) {
-            ...GatsbyImageSharpFixed_tracedSVG
-          }
-        }
-      }
     }
   `)
 
@@ -76,10 +54,6 @@ const Image = ({ imageName, alt }) => {
       return <Img fluid={site.childImageSharp.fluid} alt={alt} />
     case "bethehero.png":
       return <Img fluid={beTheHero.childImageSharp.fluid} alt={alt} />
-    case "eye.png":
-      return <Img fixed={eye.childImageSharp.fixed} alt={alt} />
-    case "code.png":
-      return <Img fixed={code.childImageSharp.fixed} alt={alt} />
     default:
       return null
   }
